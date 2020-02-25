@@ -1,81 +1,56 @@
 import React from "react"
 import "../styles/custom.css"
-import { Link } from "gatsby"
 import Helmet from "react-helmet"
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Navbar';
+import Button from 'react-bootstrap/Button';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import Form from 'react-bootstrap/Form';
+import FormControl from 'react-bootstrap/FormControl';
+import Layout from "../components/Layout"
+
 export default () => ( <>
     <Helmet>
-      <title>Taylor's Tidy Trees</title>
+      <title>Peter's Photo Portfolio
+      </title>
       <link to="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     </Helmet>
 
-
-
     <header>
-    <nav className="navbar navbar-expand-lg navbar-light fixed-top navbar-custom" style="border-bottom:1px solid black;">
-      <div className="container">
-
-        <Link className="navbar-brand" to="./home.html">
-          <img src ="../photos/lin.png" className="logo" />
-        </Link>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarResponsive">
-          <ul className="navbar-nav ml-auto">
-            <li className="nav-item active">
-              <Link className="nav-link" to="../home.html">Home
-                <span className="sr-only">(current)</span>
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="about.html">About</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="gallery.html">Gallery</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="bananas.html">Bananas?</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="contactme.html">Contact Me</Link>
-            </li>
-          </ul>
+    <Navbar bg="light" expand="lg">
+  <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+  <Navbar.Toggle aria-controls="basic-navbar-nav" />
+  <Navbar.Collapse id="basic-navbar-nav">
+    <Nav className="mr-auto">
+      <Nav.Link href="#home">Home</Nav.Link>
+      <Nav.Link href="#link">Link</Nav.Link>
+      <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+        <NavDropdown.Divider />
+        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+      </NavDropdown>
+    </Nav>
+    <Form inline>
+      <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+      <Button variant="outline-success">Search</Button>
+    </Form>
+  </Navbar.Collapse>
+</Navbar>
+</header>
+    <Layout>
+    /*<div className="hero-image">
+      <div className="col-med-12">
+        <div className="row text-center">
+          <div className="hero-text">
+            <h1>My name is Peter Lin</h1>
+            <p>I am a young professional looking to start his career</p>
+          </div>
         </div>
       </div>
-    </nav></header>
-    <main>
-    <nav className="navbar navbar-expand-lg navbar-light fixed-top navbar-custom" style="border-bottom:1px solid black;">
-      <div className="container">
-
-        <a className="navbar-brand" to="./home.html">
-          <img src ="../photos/lin.png" className="logo" />
-        </a>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarResponsive">
-          <ul className="navbar-nav ml-auto">
-            <li className="nav-item active">
-              <a className="nav-link" to="../home.html">Home
-                <span className="sr-only">(current)</span>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" to="about.html">About</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" to="gallery.html">Gallery</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" to="bananas.html">Bananas?</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" to="contactme.html">Contact Me</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    </main>
+    </div>*/
+    </Layout>
   </>
 )
