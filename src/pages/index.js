@@ -41,7 +41,7 @@ export default () => ( <>
 </Navbar>
 </header>
     <Layout>
-    /*<div className="hero-image">
+    <div className="hero-image">
       <div className="col-med-12">
         <div className="row text-center">
           <div className="hero-text">
@@ -50,7 +50,7 @@ export default () => ( <>
           </div>
         </div>
       </div>
-    </div>*/
+    </div>
     </Layout>
   </>
 )
